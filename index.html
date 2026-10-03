@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABYSSATA</title>
+<meta name="description" content="Abyssata: a work in progress.">
+<link rel="canonical" href="https://abyssata.blog/">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   ABYSSATA · the front door
+   The name between two hairlines, a line beneath, and the way into the
+   other rooms: the garden, miscellany, the diary, inquiries.
+   ═══════════════════════════════════════════════════════════════════ */
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "STIX Two Text"; src: url("fonts/stix-two-text-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+
+:root {
+  --accent: #5c2229;                     /* oxblood, as on every page */
+  --accent-line: rgba(92, 34, 41, 0.3);
+  --quiet: #767676;
+  --hairline: #e4e4e4;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  background: #fff;
+  color: #4a4a4a;
+  font-family: "Spectral", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: #efefef; color: #111; }
+
+main { width: 100%; max-width: 46rem; text-align: center; }
+
+/* The name: spaced semibold capitals between two hairlines */
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 0;
+  font: 600 clamp(1.7rem, 8.4vw, 4.2rem)/1 "STIX Two Text", "Times New Roman", Times, serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1 span { margin-right: -0.2em; }        /* the spacing after the last A shouldn't push it off-centre */
+h1::before, h1::after { content: ""; flex: 1; border-top: 1px solid var(--hairline); }
+
+.wip {
+  margin: 1.3rem 0 2.6rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--quiet);
+}
+
+/* The way in: like the menus on the other sites */
+nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; row-gap: 0.4rem; }
+nav a {
+  font: 400 0.9rem/1.35 "Spectral", Georgia, serif;
+  color: var(--quiet);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+nav a::first-letter { font-style: italic; }
+nav a:hover { color: var(--accent); text-decoration-color: var(--accent-line); }
+nav a[aria-current=page] { color: var(--accent); font-weight: 700; text-decoration-color: var(--accent-line); }
+nav .sep { margin: 0 0.65em; color: #d8d8d8; }
+</style>
+</head>
+<body>
+<main>
+  <h1><span>Abyssata</span></h1>
+  <p class="wip">a work in progress</p>
+  <nav aria-label="Sites">
+    <a href="https://abyssata.blog/" aria-current="page">home</a><span class="sep" aria-hidden="true">·</span><a href="https://garden.abyssata.blog/">garden</a><span class="sep" aria-hidden="true">·</span><a href="https://misc.abyssata.blog/">miscellany</a><span class="sep" aria-hidden="true">·</span><a href="https://diary.abyssata.blog/">diary</a><span class="sep" aria-hidden="true">·</span><a href="https://ask.abyssata.blog/">inquiries</a>
+  </nav>
+</main>
+</body>
+</html>
